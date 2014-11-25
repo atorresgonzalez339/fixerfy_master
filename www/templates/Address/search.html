@@ -1,0 +1,23 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <div class="bar bar-header item-input-inset" style="position: absolute">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <form id="form" role="form">
+                    <input id="addressSearch" type="search" data-ng-model="addressSearch" data-ng-change="addressChange(addressSearch)" placeholder="Search">
+                </form>
+            </label>
+            <button class="button button-clear" data-ng-click="closeAddressModal()">
+                Cancel
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <a class="item item-icon-left address-item" href="#" data-ng-click="addressSelected(address, $event);" data-ng-repeat="address in addressResult">
+                <i class="icon ion-ios7-location"></i>
+                {{address.formatted_address}}
+            </a>
+        </div>
+    </ion-content>
+</ion-modal-view>

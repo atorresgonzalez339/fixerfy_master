@@ -1,0 +1,31 @@
+<div class="modal">
+    <ion-header-bar> 
+        <div class="buttons">
+            <button class="button button-clear button-positive" ng-click="closeBusinessModal()">Cancel</button>
+        </div>
+        <h1 class="title">Add Business</h1>
+        <div class="buttons">
+            <button class="button button-clear button-positive" ng-click="submitBusinessModal()">Done</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form novalidate ng-submit="submitBusinessModal()">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <input type="text" data-ng-model="businessData.name" placeholder="Business Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <input type="text" data-ng-model="businessData.slogan" placeholder="Slogan (Opcional)">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <input type="email" data-ng-model="businessData.email"  placeholder="Email">
+                </label>
+                <section data-ng-controller="AddressController">
+                    <label class="item item-input item-floating-label">
+                        <input type="text" data-ng-model="addressSelectedData.data.formatted_address" data-ng-focus="showAddressModal()"  placeholder="Address"/>
+                    </label>
+                </section>
+            </div>
+        </form>
+    </ion-content>
+</div>
