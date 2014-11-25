@@ -81,6 +81,7 @@ app.controller('BusinessController', function($scope, $ionicModal, $geofire, geo
 
     var addBusiness = function()
     {
+        //Sacar el contry y el state de la componente del address seleccionado
         var country = 'US';
         var state = 'FL';
 
